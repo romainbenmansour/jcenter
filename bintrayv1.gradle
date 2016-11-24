@@ -28,12 +28,13 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
+    org = properties.getProperty("bintray.org")
 
     configurations = ['archives']
     pkg {
         repo = bintrayRepo
         name = bintrayName
-        userOrg = 'icarie'
+        userOrg = org
         desc = libraryDescription
         publish = true
         publicDownloadNumbers = true
